@@ -26,7 +26,6 @@ ul{padding:0;margin:0;}
 
 /**Quotes**/
 .quote{padding:10rem;background:#b3c3ca;text-align:center;font-style:italic;color:#000000;font-weight:bold;}
-.quote .quote-content{max-width:768px;margin:0 auto;}
 
 /**Buttons**/
 .button{background:#b2dcf0;color:#000000;padding:1rem 2rem;text-decoration:none;display:inline-block;cursor:pointer;}
