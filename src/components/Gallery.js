@@ -101,7 +101,7 @@ function Gallery(){
                 </div>
             </div>
 
-            <div className="gallery-row">
+            <div className="gallery-row"> 
                 <div class="gallery-item" key={8} ref={(element) => images.current.push(element)}>
                     <img src={photo_8} alt="Wedding cake with icing sugar dusting"></img>
                 </div>
