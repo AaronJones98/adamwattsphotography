@@ -28,13 +28,13 @@ function Offerings(){
     return (
 
         <div className={`offerings ${overlay ? 'overlays' : ''}`}>
-            <div class="overlays">
-            <video className={`overlay ${overlay == 'videography' ? 'active' : ''}`} autoplay="" loop="true" muted="true" src="https://adamwattsphotography.co.uk/wp-content/uploads/2018/11/Wedding-Trailer.mp4"> </video>
-            <img src={photography_overlay} className={`overlay ${overlay == 'photography' ? 'active' : ''}`}></img>
-            <img src={occassions_overlay} className={`overlay ${overlay == 'occassions' ? 'active' : ''}`}></img>
+            <div className="overlays">
+            <iframe className={`overlay ${overlay === 'videography' ? 'active' : ''}`} width="560" height="315" src="https://www.youtube.com/embed/XnH7ZuoUa5U?autoplay=1&controls=0&disablekb=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src={photography_overlay} alt="Photgraphy" className={`overlay ${overlay === 'photography' ? 'active' : ''}`}></img>
+            <img src={occassions_overlay} alt="Occassions" className={`overlay ${overlay === 'occassions' ? 'active' : ''}`}></img>
             </div>
             <div class="table">
-            <Link to="/weddings" className="offering" data-overlay="photography">
+            <Link to="/photography" className="offering" data-overlay="photography">
                 <div className="content">
                 <h3>Wedding Photography</h3>
                 <div className="description">
@@ -57,7 +57,7 @@ function Offerings(){
             </Link>
             <Link to="/occassions" className="offering" data-overlay="occassions">
                 <div className="content">
-                <h3>Other Occassions</h3>
+                <h3>Occassions</h3>
                 <div className="description">
                     We provide our services not just at weddings but for many different occassions.
                 </div>

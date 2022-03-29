@@ -1,31 +1,42 @@
-import React, { useRef, useEffect } from 'react';
-import Quote from '../components/Quote';
+import React from 'react';
+import {Link} from 'react-router-dom';
 import Hero from '../components/Hero';
 import Offerings from './Offerings';
+import {motion} from 'framer-motion';
 
 function Home(){
 
-
     return (
 
-        <div className="homepage">
+        <motion.div exit="out" animate="in" initial="initial" variants={window.pageVariations} transition={window.pageTransition} className="homepage page">
             <Hero 
-            title="Why choose me?" 
-            text="Adam Watts Photography is a family run business based in Banbury. Me and my awesome team are all about having fun and creating high quality imagery you can look back at for years to come."
+            title="We're a family run photography business based in Banbury." 
             styledlinktext="Get in touch"
-            styledlink="#contact"
+            styledlink="mailto:adamwattsphotography@live.co.uk"
             buttontext="See my work"
-            buttonlink="/weddings"
+            buttonlink="/photography"
             ></Hero>
             <Offerings/>
-            <Hero 
-            title="Oxfordshire & Surrounding areas" 
-            text="Adam Watts Photography is a family run business based in Banbury. Me and my awesome team are all about having fun and creating high quality imagery you can look back at for years to come."
-            styledlinktext="Enquire now"
-            styledlink="#contact"
-            alignment="right"
-            ></Hero>
-        </div>
+            <div className="text-panel">
+                <div className="container thin">
+                    <div className="grid">
+                        <div className="col">
+                        <h2>About us</h2>
+                        </div>
+                        <div className="col">
+                            <p>Myself, an art major and Photography manager for a leading school photography company and my sister, a media student graduate make up our team.</p>
+                            <p>We create high quality photographs and videos for all types of events. We mainly work with weddings but have worked in many different industries.</p>
+                            <p>Based central UK, Banbury, Oxfordshire we are happy to travel up and down the country.</p>
+                            <Link to="/photography" class="styled-link dark">
+                            <span className="arrow before"></span>
+                            See my work
+                            <span className="arrow after"></span>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </motion.div>
     )
 }
 export default Home;

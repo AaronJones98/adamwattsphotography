@@ -1,9 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import MainNavigation from './MainNavigation';
 import {Link} from 'react-router-dom';
-import logo_white from '../assets/logo-white.png';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import logo_white from '../assets/logo-white.svg';
 
 function Header(){
 
@@ -24,7 +22,7 @@ return(
             <div className="table">
                 <div className="left-side">
                     <Link to="/">
-                        <img src={logo_white}/>
+                        <img src={logo_white} alt="Adam Watts Photography" />
                     </Link>
                 </div>
                 <div className="right-side">
@@ -38,7 +36,7 @@ return(
         <div className="table">
             <div className="left-side">
                 <Link to="/">
-                    <img src={logo_white}/>
+                    <img src={logo_white} alt="Adam Watts Photography" />
                 </Link>
             </div>
             <div className="right-side">
